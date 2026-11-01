@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Murad Eminli — AI Engineer & Web Developer</title>
+<meta name="description" content="Murad Eminli — freelance AI engineer, web developer and data analyst based in Baku, Azerbaijan. Websites with admin panels, AI chatbots and RAG systems, SQL and Tableau analytics.">
+<meta property="og:title" content="Murad Eminli — AI Engineer & Web Developer">
+<meta property="og:description" content="Freelance web development, AI/LLM integration and data analytics. Baku, Azerbaijan — working with clients worldwide.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://murad-eminli.github.io/">
+<link rel="canonical" href="https://murad-eminli.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314161c'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='30' fill='%23e8b15a'%3EME%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f4ef; --surface:#ffffff; --ink:#15171c; --ink-2:#4a4f5a; --ink-3:#7a7f8a;
+    --line:#e3dfd5; --accent:#b7792a; --accent-soft:#f3e6d2; --tag:#efece5;
+    --radius:14px; --max:1040px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#111317; --surface:#181b21; --ink:#eceae4; --ink-2:#b4b6bc; --ink-3:#8a8d95;
+      --line:#2a2e36; --accent:#e8b15a; --accent-soft:#2c251a; --tag:#22262d;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+  /* nav */
+  nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:19px;text-decoration:none}
+  .brand span{color:var(--accent)}
+  nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+  nav ul a{text-decoration:none;color:var(--ink-2);font-size:14.5px;font-weight:500}
+  nav ul a:hover{color:var(--ink)}
+  @media (max-width:640px){nav ul li:not(:last-child){display:none}}
+
+  /* hero */
+  header.hero{padding:88px 0 64px}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--accent);letter-spacing:.02em;display:flex;align-items:center;gap:8px}
+  .dot{width:8px;height:8px;border-radius:50%;background:#3fa66a;box-shadow:0 0 0 4px color-mix(in srgb,#3fa66a 22%,transparent)}
+  h1{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(36px,6vw,62px);line-height:1.06;letter-spacing:-.02em;margin:18px 0 20px;max-width:15ch}
+  h1 em{font-style:normal;color:var(--accent)}
+  .lede{font-size:clamp(17px,2vw,19px);color:var(--ink-2);max-width:60ch;margin:0 0 32px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--ink);transition:transform .15s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn.primary{background:var(--ink);color:var(--bg)}
+  .btn.ghost{background:transparent}
+  .facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:44px;padding-top:24px;border-top:1px solid var(--line);color:var(--ink-3);font-size:14px}
+  .facts b{color:var(--ink);font-weight:600}
+
+  /* sections */
+  section{padding:64px 0;border-top:1px solid var(--line)}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+  h2{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:clamp(26px,3.4vw,34px);letter-spacing:-.01em;margin:0}
+  .num{font-family:"JetBrains Mono",monospace;font-size:13px;color:var(--ink-3)}
+  .sub{color:var(--ink-2);max-width:56ch;margin:8px 0 0}
+
+  /* services */
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .card h3{font-size:17px;margin:12px 0 8px;font-weight:600}
+  .card p{margin:0;color:var(--ink-2);font-size:15px}
+  .ico{width:38px;height:38px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center}
+  .ico svg{width:20px;height:20px}
+
+  /* work */
+  .work{display:grid;gap:16px}
+  .project{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:grid;gap:10px;grid-template-columns:1fr auto;align-items:start}
+  .project .meta{font-family:"JetBrains Mono",monospace;font-size:12.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em}
+  .project h3{margin:0;font-size:20px;font-weight:600}
+  .project p{margin:0;color:var(--ink-2);font-size:15.5px;grid-column:1/-1}
+  .project .link{font-size:14px;font-weight:600;color:var(--accent);text-decoration:none;white-space:nowrap}
+  .project .link:hover{text-decoration:underline}
+  .tags{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+  .tags span{font-family:"JetBrains Mono",monospace;font-size:12px;background:var(--tag);color:var(--ink-2);padding:4px 9px;border-radius:6px}
+  @media (max-width:560px){.project{grid-template-columns:1fr}.project .link{justify-self:start}}
+
+  /* stack */
+  .stack{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  .stack div{padding:4px 0}
+  .stack h4{margin:0 0 8px;font-size:13px;font-family:"JetBrains Mono",monospace;font-weight:500;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em}
+  .stack p{margin:0;color:var(--ink-2);font-size:15px}
+
+  /* process */
+  .steps{list-style:none;padding:0;margin:0;display:grid;gap:0;counter-reset:s}
+  .steps li{counter-increment:s;display:grid;grid-template-columns:56px 1fr;gap:12px;padding:18px 0;border-bottom:1px dashed var(--line)}
+  .steps li:last-child{border-bottom:0}
+  .steps li::before{content:counter(s,decimal-leading-zero);font-family:"JetBrains Mono",monospace;color:var(--accent);font-size:14px;padding-top:2px}
+  .steps b{display:block;font-weight:600;margin-bottom:2px}
+  .steps span{color:var(--ink-2);font-size:15px}
+
+  /* contact */
+  .contact{background:var(--ink);color:var(--bg);border-radius:20px;padding:44px 32px;display:grid;gap:20px}
+  .contact h2{color:var(--bg)}
+  .contact p{margin:0;opacity:.8;max-width:52ch}
+  .contact .btn{border-color:var(--bg)}
+  .contact .btn.primary{background:var(--accent);border-color:var(--accent);color:#15171c}
+  .contact .btn.ghost{color:var(--bg)}
+  footer{padding:36px 0 48px;color:var(--ink-3);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#">Murad Eminli<span>.</span></a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span>Available for freelance projects</div>
+    <h1>I build websites, <em>AI tools</em> and data systems.</h1>
+    <p class="lede">Freelance AI engineer, web developer and data analyst based in Baku, Azerbaijan. I design and ship complete solutions for small businesses and teams — from multilingual websites with admin panels to AI chatbots and SQL analytics.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:eminlimurad878@gmail.com">Start a project</a>
+      <a class="btn ghost" href="https://github.com/murad-eminli" target="_blank" rel="noopener">View GitHub</a>
+    </div>
+    <div class="facts">
+      <span><b>Location</b> &nbsp;Baku, Azerbaijan (UTC+4)</span>
+      <span><b>Clients</b> &nbsp;Worldwide, remote</span>
+      <span><b>Languages</b> &nbsp;English · Azerbaijani · Turkish</span>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>Services</h2><p class="sub">Each project is scoped, quoted and invoiced up front.</p></div>
+      <span class="num">01</span>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v5"/></svg></div>
+        <h3>Web development</h3>
+        <p>Business websites and web apps with admin panels, order systems, multilingual content and secure backends (Supabase, Cloudflare).</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/></svg></div>
+        <h3>AI &amp; LLM integration</h3>
+        <p>RAG chatbots over your documents, AI agents with tool calling, and LLM features built into existing products.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+        <h3>Data analytics</h3>
+        <p>Database design, Oracle SQL analysis and Tableau dashboards that turn raw business data into clear decisions.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h10M4 17h6M17 4l3 3-3 3M14 14l3 3-3 3"/></svg></div>
+        <h3>Automation</h3>
+        <p>Workflow automation with Python and n8n — notifications, data pipelines and repetitive tasks handled automatically.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><h2>Selected work</h2><p class="sub">Client projects and open-source work. Source code for the AI and data projects is public on GitHub.</p></div>
+      <span class="num">02</span>
+    </div>
+    <div class="work">
+
+      <article class="project">
+        <div><div class="meta">Client project · 2026</div><h3>Remote IT Helpdesk Platform</h3></div>
+        <a class="link" href="https://tacirqadirli.com" target="_blank" rel="noopener">tacirqadirli.com ↗</a>
+        <p>A full website for an independent IT support specialist serving clients internationally. Service catalogue, online ordering, customer reviews with moderation, and an admin panel where the owner manages services, prices and content himself.</p>
+        <div class="tags"><span>AZ / EN / TR</span><span>Supabase</span><span>Edge Functions</span><span>Cloudflare Pages</span><span>Admin panel</span></div>
+      </article>
+
+      <article class="project">
+        <div><div class="meta">Client project · 2026</div><h3>Wholesale Construction Materials Catalogue</h3></div>
+        <span class="link" style="color:var(--ink-3)">Private client</span>
+        <p>A product catalogue for a wholesale building-materials business. Catalogue pages processed from supplier PDFs, an admin panel for managing products, and ordering through WhatsApp. Built to run fast on older phones.</p>
+        <div class="tags"><span>JavaScript</span><span>Supabase</span><span>Netlify</span><span>PDF processing</span></div>
+      </article>
+
+      <article class="project">
+        <div><div class="meta">Open source · AI</div><h3>Jarvis SQL Agent</h3></div>
+        <a class="link" href="https://github.com/murad-eminli/jarvis-sql-agent" target="_blank" rel="noopener">GitHub ↗</a>
+        <p>An AI agent that answers business questions by writing and running SQL through LLM tool calling. Includes a guard module that reports any hidden filters the agent added, with automated tests.</p>
+        <div class="tags"><span>Python</span><span>Groq API</span><span>Tool calling</span><span>SQLite</span></div>
+      </article>
+
+      <article class="project">
+        <div><div class="meta">Open source · AI</div><h3>Azerbaijani PDF RAG</h3></div>
+        <a class="link" href="https://github.com/murad-eminli/azerbaijani-pdf-rag" target="_blank" rel="noopener">GitHub ↗</a>
+        <p>A document Q&amp;A bot for Azerbaijani-language PDFs: cleans messy PDF text, retrieves with multilingual embeddings and rewrites follow-up questions for accurate answers.</p>
+        <div class="tags"><span>LangChain</span><span>Chroma</span><span>bge-m3</span><span>Groq</span></div>
+      </article>
+
+      <article class="project">
+        <div><div class="meta">Data analysis · 5 projects</div><h3>SQL &amp; Tableau Case Studies</h3></div>
+        <a class="link" href="https://github.com/murad-eminli?tab=repositories" target="_blank" rel="noopener">GitHub ↗</a>
+        <p>Hotel revenue across 8 brands, HR salary equity, order sales by category, quarterly sales trends by channel, and telecom customer churn drivers — each with SQL analysis and Tableau dashboards.</p>
+        <div class="tags"><span>Oracle SQL</span><span>Tableau</span><span>Data modeling</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="wrap">
+    <div class="sec-head"><h2>Toolkit</h2><span class="num">03</span></div>
+    <div class="stack">
+      <div><h4>Web</h4><p>HTML, CSS, JavaScript, Supabase (Postgres, Auth, Edge Functions), Cloudflare Pages &amp; Workers, Netlify</p></div>
+      <div><h4>AI / LLM</h4><p>RAG, embeddings &amp; vector search, agents and tool calling, LangChain, Groq, OpenAI, Claude, Gemini, Ollama</p></div>
+      <div><h4>Data &amp; engineering</h4><p>Python, Oracle SQL, Tableau, FastAPI, Docker, Linux, Git, n8n</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>How I work</h2><p class="sub">Simple, transparent and remote-friendly.</p></div><span class="num">04</span></div>
+    <ol class="steps">
+      <li><div><b>Brief</b><span>You describe the goal; I ask the questions that matter and confirm the scope in writing.</span></div></li>
+      <li><div><b>Quote &amp; invoice</b><span>Fixed price or hourly, agreed before work starts. Payment by international bank transfer against an invoice.</span></div></li>
+      <li><div><b>Build &amp; review</b><span>You see working previews throughout and give feedback before anything goes live.</span></div></li>
+      <li><div><b>Launch &amp; handover</b><span>Deployment, domain setup and full handover of accounts and access — you own everything.</span></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>Have a project in mind?</h2>
+      <p>Tell me what you need and I'll reply with questions, a timeline and a quote.</p>
+      <div class="cta">
+        <a class="btn primary" href="mailto:eminlimurad878@gmail.com">eminlimurad878@gmail.com</a>
+        <a class="btn ghost" href="https://github.com/murad-eminli" target="_blank" rel="noopener">github.com/murad-eminli</a>
+      </div>
+    </div>
+    <footer>
+      <span>© <span id="y">2026</span> Murad Eminli · Baku, Azerbaijan</span>
+      <span>Freelance AI engineering, web development &amp; data analytics</span>
+    </footer>
+  </div>
+</section>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
