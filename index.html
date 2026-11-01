@@ -105,6 +105,10 @@
   .contact .btn{border-color:var(--bg)}
   .contact .btn.primary{background:var(--accent);border-color:var(--accent);color:#15171c}
   .contact .btn.ghost{color:var(--bg)}
+  button.btn{font:inherit;font-weight:600;font-size:15px;cursor:pointer}
+  .email-box{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+  .email-label{font-family:"JetBrains Mono",monospace;font-size:12.5px;text-transform:uppercase;letter-spacing:.05em;opacity:.6}
+  .email-addr{font-family:"JetBrains Mono",monospace;font-size:clamp(16px,2.6vw,20px);user-select:all;word-break:break-all}
   footer{padding:36px 0 48px;color:var(--ink-3);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
 </style>
 </head>
@@ -128,7 +132,7 @@
     <h1>I build websites, <em>AI tools</em> and data systems.</h1>
     <p class="lede">Freelance AI engineer, web developer and data analyst based in Baku, Azerbaijan. I design and ship complete solutions for small businesses and teams — from multilingual websites with admin panels to AI chatbots and SQL analytics.</p>
     <div class="cta">
-      <a class="btn primary" href="mailto:eminlimurad878@gmail.com">Start a project</a>
+      <a class="btn primary" href="#contact">Start a project</a>
       <a class="btn ghost" href="https://github.com/murad-eminli" target="_blank" rel="noopener">View GitHub</a>
     </div>
     <div class="facts">
@@ -245,9 +249,15 @@
     <div class="contact">
       <h2>Have a project in mind?</h2>
       <p>Tell me what you need and I'll reply with questions, a timeline and a quote.</p>
+      <div class="email-box">
+        <span class="email-label">Email</span>
+        <span class="email-addr" id="email">eminlimurad878@gmail.com</span>
+      </div>
       <div class="cta">
-        <a class="btn primary" href="mailto:eminlimurad878@gmail.com">eminlimurad878@gmail.com</a>
-        <a class="btn ghost" href="https://github.com/murad-eminli" target="_blank" rel="noopener">github.com/murad-eminli</a>
+        <a class="btn primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=eminlimurad878@gmail.com&amp;su=Project%20inquiry" target="_blank" rel="noopener">Write in Gmail</a>
+        <button class="btn ghost" type="button" id="copyBtn">Copy email</button>
+        <a class="btn ghost" href="mailto:eminlimurad878@gmail.com?subject=Project%20inquiry">Open email app</a>
+        <a class="btn ghost" href="https://github.com/murad-eminli" target="_blank" rel="noopener">GitHub</a>
       </div>
     </div>
     <footer>
@@ -257,6 +267,20 @@
   </div>
 </section>
 
-<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+(function(){
+  var btn=document.getElementById('copyBtn'), email=document.getElementById('email').textContent.trim();
+  function done(ok){btn.textContent=ok?'Copied ✓':'Select & copy above';setTimeout(function(){btn.textContent='Copy email';},2000);}
+  btn.addEventListener('click',function(){
+    if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(email).then(function(){done(true);},function(){fallback();});}
+    else fallback();
+  });
+  function fallback(){
+    try{var t=document.createElement('textarea');t.value=email;t.style.position='fixed';t.style.opacity='0';document.body.appendChild(t);t.select();var ok=document.execCommand('copy');document.body.removeChild(t);done(ok);}
+    catch(e){done(false);}
+  }
+})();
+</script>
 </body>
 </html>
